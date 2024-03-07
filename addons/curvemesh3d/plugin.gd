@@ -17,13 +17,15 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+#
+# Rewritten in C# by Vladimir D. (stealingudc)
 
 @tool
 extends EditorPlugin
 
 
 func _enter_tree() -> void:
-	add_custom_type("CurveMesh3D", "Path3D", preload("curvemesh3d.gd"), preload("icon.svg"))
+	add_custom_type("CurveMesh3D", "Path3D", preload("CurveMesh3D.cs"), preload("icon.svg"))
 	
 
 func _exit_tree() -> void:
